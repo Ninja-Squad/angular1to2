@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="main.js"></script>
+
+    </script>
+  </head>
+
+  <body class="container" ng-app="scopeInheritance" ng-controller="MainController as mainCtrl" style="margin-top: 200px">
+    <div class="col-md-12 text-center"><h1>controllerAs</h1></div>
+    <div class="col-md-6">
+      <form name="register">
+        <div class="form-group">
+          <label for="name">Username</label>
+          <input type="text" class="form-control" id="name" placeholder="Username" ng-model="mainCtrl.username">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="mainCtrl.acceptSpam"> Accept spam?
+          </label>
+        </div>
+        <div class="form-group" ng-if="mainCtrl.acceptSpam">
+          <label for="email">Email address</label>
+          <input type="text" class="form-control" id="email" placeholder="Email" ng-model="mainCtrl.email">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h2>Username: {{mainCtrl.username}}</h2>
+      <h2>Email: {{mainCtrl.email}}</h2>
+    </div>
+  </body>
+
+</html>
