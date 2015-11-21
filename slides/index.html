@@ -5843,18 +5843,18 @@
                       <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 948px; height: 520px; left: 6px; top: 90px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;" data-highlight-theme="zenburn">
                               <pre><code>&lt;html ng-app&gt;
-    &lt;head&gt;
-      &lt;script src="angular.js"&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;div&gt;
-        &lt;label&gt;Name:&lt;/label&gt;
-        &lt;input type="text" ng-model="yourName"&gt;
-        &lt;hr&gt;
-        &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
-      &lt;/div&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;</code></pre>
+  &lt;head&gt;
+    &lt;script src="angular.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;label&gt;Name:&lt;/label&gt;
+      &lt;input type="text" ng-model="yourName"&gt;
+      &lt;hr&gt;
+      &lt;h1&gt;Hello {{yourName}}!&lt;/h1&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
                           </div>
                       </div>
                   </section>
@@ -6358,50 +6358,31 @@
                   <section>
                       <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
                           <div class="sl-block-content">
-                              <h1>Learn promises</h1>
-                          </div>
-                      </div>
-                  </section>
-                  <section class="has-dark-background" data-background-color="#3f3f3f">
-                      <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 945px; height: 181px; left: 8px; top: 260px;">
-                          <div class="sl-block-content" style="z-index: 11; font-size: 160%;">
-                              <pre><code>raceService.get(raceId, function(race) {
-    locationService.get(race.locationId, function(location) {
-      $scope.location = location;
-    }
-  })</code></pre>
-                          </div>
-                      </div>
-                  </section>
-                  <section class="has-dark-background" data-background-color="#3f3f3f">
-                      <div class="sl-block" data-block-type="code" style="width: 945px; height: 249px; left: 8px; top: 226px;">
-                          <div class="sl-block-content" style="z-index: 11; font-size: 160%;">
-                              <pre><code>raceService.get(raceId)
-    .then(function(race) {
-      return locationService.get(race.locationId)
-    })
-    .then(function(location) {
-      $scope.location = location;
-    });</code></pre>
-                          </div>
-                      </div>
-                  </section>
-                  <section>
-                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
-                          <div class="sl-block-content" dir="ui">
-                              <h1>Promises</h1>
-                              <h1>traps &amp; tips</h1>
-                              <p>&nbsp;</p>
-                              <p>
-                                  <a href="http://blog.ninja-squad.com/2015/05/28/angularjs-promises/" target="_blank">blog.ninja-squad.com/2015/05/28/angularjs-promises/</a>
-                              </p>
+                              <h1>$scope</h1>
                           </div>
                       </div>
                   </section>
                   <section>
                       <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
                           <div class="sl-block-content">
-                              <h1>$scope</h1>
+                              <h1>$scope soup</h1>
+                          </div>
+                      </div>
+                  </section>
+                  <section class="has-dark-background" data-background-color="#3f3f3f">
+                      <div class="sl-block" data-block-type="code" style="width: 800px; height: 426px; left: 80px; top: 137px;">
+                          <div class="sl-block-content" style="z-index: 11; font-size: 190%;">
+                              <pre><code>
+  function($scope) {
+
+    $scope.friend = 'Cédric';
+    $scope.counter = 0;
+
+    $scope.greetings = function(name) {
+      return 'hello ' + name;
+    }
+
+  };</code></pre>
                           </div>
                       </div>
                   </section>
@@ -6416,11 +6397,11 @@
                       <div class="sl-block" data-block-type="code" style="width: 935px; height: 307px; left: 13px; top: 197px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 240%;">
                               <pre><code>&lt;div ng-controller="MainCtrl"&gt;
+  {{ ninja }}
+  &lt;div ng-controller="ComponentCtrl"&gt;
     {{ ninja }}
-    &lt;div ng-controller="ComponentCtrl"&gt;
-      {{ ninja }}
-    &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                           </div>
                       </div>
                   </section>
@@ -6677,22 +6658,13 @@
                       <div class="sl-block" data-block-type="code" style="width: 800px; height: 319px; left: 80px; top: 191px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 190%;">
                               <pre><code>&lt;form name="register"&gt;
-    &lt;div&gt;
-      &lt;input ng-model="username"&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;input ng-model="email"&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;</code></pre>
-                          </div>
-                      </div>
-                  </section>
-                  <section>
-                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
-                          <div class="sl-block-content" dir="ui">
-                              <h1>
-                                  <a href="http://localhost:8080/without.html" target="_blank">Demo</a>
-                              </h1>
+  &lt;div&gt;
+    &lt;input ng-model="username"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;input ng-model="email"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                           </div>
                       </div>
                   </section>
@@ -6707,14 +6679,14 @@
                       <div class="sl-block" data-block-type="code" style="width: 947px; height: 381px; left: 7px; top: 160px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 190%;">
                               <pre><code>&lt;form name="register"&gt;
-    &lt;div&gt;
-      &lt;input ng-model="username"&gt;
-    &lt;/div&gt;
-    &lt;input type="checkbox" ng-model="acceptSpam"&gt;
-    &lt;div ng-if="acceptSpam"&gt;
-      &lt;input ng-model="email"&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;</code></pre>
+  &lt;div&gt;
+    &lt;input ng-model="username"&gt;
+  &lt;/div&gt;
+  &lt;input type="checkbox" ng-model="acceptSpam"&gt;
+  &lt;div ng-if="acceptSpam"&gt;
+    &lt;input ng-model="email"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                           </div>
                       </div>
                   </section>
@@ -6730,30 +6702,6 @@
                   <section>
                       <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
                           <div class="sl-block-content">
-                              <h1>$scope soup</h1>
-                          </div>
-                      </div>
-                  </section>
-                  <section class="has-dark-background" data-background-color="#3f3f3f">
-                      <div class="sl-block" data-block-type="code" style="width: 800px; height: 426px; left: 80px; top: 137px;">
-                          <div class="sl-block-content" style="z-index: 11; font-size: 190%;">
-                              <pre><code>
-  function($scope) {
-
-    $scope.friend = 'Cédric';
-    $scope.counter = 0;
-
-    $scope.greetings = function(name) {
-      return 'hello ' + name;
-    }
-
-  };</code></pre>
-                          </div>
-                      </div>
-                  </section>
-                  <section>
-                      <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 270px; height: auto;">
-                          <div class="sl-block-content">
                               <h1>controllerAs</h1>
                           </div>
                       </div>
@@ -6761,9 +6709,9 @@
                   <section class="has-dark-background" data-background-color="#3f3f3f">
                       <div class="sl-block" data-block-type="code" style="width: 800px; height: 162px; left: 80px; top: 269px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 190%;">
-                              <pre><code>&lt;div ng-controller="MainCtrl as main"&gt;
-    {{main.greetings(main.friend)}}
-  &lt;/div&gt;</code></pre>
+                              <pre><code>&lt;div ng-controller="MainCtrl as mainCtrl"&gt;
+  {{mainCtrl.greetings(mainCtrl.friend)}}
+&lt;/div&gt;</code></pre>
                           </div>
                       </div>
                   </section>
@@ -6790,14 +6738,14 @@
                       <div class="sl-block" data-block-type="code" style="width: 947px; height: 316px; left: 7px; top: 192px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 160%;">
                               <pre><code>&lt;form name="register"&gt;
-    &lt;div&gt;
-      &lt;input ng-model="main.username"&gt;
-    &lt;/div&gt;
-    &lt;input type="checkbox" ng-model="main.acceptSpam"&gt;
-    &lt;div ng-if="main.acceptSpam"&gt;
-      &lt;input ng-model="main.email"&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;</code></pre>
+  &lt;div&gt;
+    &lt;input ng-model="mainCtrl.username"&gt;
+  &lt;/div&gt;
+  &lt;input type="checkbox" ng-model="mainCtrl.acceptSpam"&gt;
+  &lt;div ng-if="mainCtrl.acceptSpam"&gt;
+    &lt;input ng-model="mainCtrl.email"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
                           </div>
                       </div>
                   </section>
@@ -7160,18 +7108,15 @@
                       <div class="sl-block" data-block-type="text" style="width: 800px; left: 80px; top: 85px; height: auto;">
                           <div class="sl-block-content" style="text-align: left;">
                               <h1 class="fragment" data-fragment-index="0">
-                                  <span style="color:#FFFFFF">Promises</span>
-                              </h1>
-                              <h1 class="fragment" data-fragment-index="1">
                                   <span style="color:#FFFFFF">$scope soup</span>
                               </h1>
-                              <h1 class="fragment" data-fragment-index="2">
+                              <h1 class="fragment" data-fragment-index="1">
                                   <span style="color:#FFFFFF">$scope inheritance</span>
                               </h1>
-                              <h1 class="fragment" data-fragment-index="3">
+                              <h1 class="fragment" data-fragment-index="2">
                                   <span style="color:#FFFFFF">Performances</span>
                               </h1>
-                              <h1 class="fragment" data-fragment-index="4">
+                              <h1 class="fragment" data-fragment-index="3">
                                   <span style="color:#FFFFFF">Memory leaks</span>
                               </h1>
                           </div>
@@ -7304,7 +7249,7 @@
                               <p>+</p>
                               <h1>Logic</h1>
                               <p>+</p>
-                              <h1>Interface</h1>
+                              <h1>Inputs/Outputs</h1>
                           </div>
                       </div>
                   </section>
@@ -8095,12 +8040,12 @@
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>import {Component} from 'angular2/angular2';
 
-  @Component({
+@Component({
 
-  })
-  class RaceCmp {
+})
+class RaceCmp {
 
-  }</code></pre>
+}</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8108,15 +8053,15 @@
                       <div class="sl-block" data-block-type="code" style="width: 800px; height: 560px; left: 80px; top: 70px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>@Component({
-    templateUrl: 'race.html'
-  })
-  class RaceCmp {
+  templateUrl: 'race.html'
+})
+class RaceCmp {
 
-    constructor() {
+  constructor() {
 
-    }
+  }
 
-  }</code></pre>
+}</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8124,14 +8069,14 @@
                       <div class="sl-block" data-block-type="code" style="width: 832px; height: 560px; left: 64px; top: 70px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>@Component({
-    templateUrl: 'race.html'
-  })
-  class RaceCmp {
+  templateUrl: 'race.html'
+})
+class RaceCmp {
 
-    constructor(routeParams: RouteParams) {
-      this.raceId = routeParams.get('id');
-    }
-  }</code></pre>
+  constructor(routeParams: RouteParams) {
+    this.raceId = routeParams.get('id');
+  }
+}</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8139,21 +8084,21 @@
                       <div class="sl-block" data-block-type="code" style="width: 800px; height: 560px; left: 80px; top: 70px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 175%;">
                               <pre><code>@Component({
-    templateUrl: 'race.html'
-  })
-  class RaceCmp {
+  templateUrl: 'race.html'
+})
+class RaceCmp {
 
-    constructor(routeParams: RouteParams,
-      private raceService: RaceService) {
-      this.raceId = routeParams.get('id');
-      raceService.get(this.raceId)
-        .then(race =&gt; this.race = race);
-    }
+  constructor(routeParams: RouteParams,
+    private raceService: RaceService) {
+    this.raceId = routeParams.get('id');
+    raceService.get(this.raceId)
+      .then(race =&gt; this.race = race);
+  }
 
-    bet(pony) {
-      this.raceService.bet(this.raceId, pony);
-    }
-  }</code></pre>
+  bet(pony) {
+    this.raceService.bet(this.raceId, pony);
+  }
+}</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8170,18 +8115,18 @@
                       <div class="sl-block" data-block-type="code" style="width: 800px; height: 560px; left: 80px; top: 70px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>@Injectable()
-  class RaceService {
+class RaceService {
 
-    constructor(private http:Http) {}
+  constructor(private http:Http) {}
 
-    get(raceId) {
-      // ...
-    }
+  get(raceId) {
+    // ...
+  }
 
-    bet(raceId, pony) {
-      // ...
-    }
-  }</code></pre>
+  bet(raceId, pony) {
+    // ...
+  }
+}</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8196,10 +8141,10 @@
                       <div class="sl-block" data-block-type="code" style="width: 800px; height: 214px; left: 80px; top: 243px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>bootstrap(PonyracerApp, [
-    ROUTER_PROVIDERS,
-    HTTP_PROVIDERS,
-    RaceService
-  ]);</code></pre>
+  ROUTER_PROVIDERS,
+  HTTP_PROVIDERS,
+  RaceService
+]);</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8215,10 +8160,10 @@
                       <div class="sl-block" data-block-type="code" style="width: 907px; height: 265px; left: 27px; top: 218px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 180%;">
                               <pre><code>&lt;div&gt;
-    &lt;h2&gt;{{race.name}}&lt;/h2&gt;
+  &lt;h2&gt;{{race.name}}&lt;/h2&gt;
 
-  &lt;/div&gt;
-  </code></pre>
+&lt;/div&gt;
+</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8226,11 +8171,11 @@
                       <div class="sl-block" data-block-type="code" style="width: 907px; height: 265px; left: 27px; top: 218px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 180%;">
                               <pre><code>&lt;div&gt;
-    &lt;h2&gt;{{race.name}}&lt;/h2&gt;
+  &lt;h2&gt;{{race.name}}&lt;/h2&gt;
 
-    &lt;img [src]="race.logo"&gt;&lt;/img&gt;
-  &lt;/div&gt;
-  </code></pre>
+  &lt;img [src]="race.logo"/&gt;
+&lt;/div&gt;
+</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8238,11 +8183,11 @@
                       <div class="sl-block" data-block-type="code" style="width: 907px; height: 265px; left: 27px; top: 219px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 180%;">
                               <pre><code>&lt;div&gt;
-    &lt;h2&gt;{{race.name}}&lt;/h2&gt;
+  &lt;h2&gt;{{race.name}}&lt;/h2&gt;
 
-    &lt;img [src]="race.logo" (click)="zoomIn()"&gt;&lt;/img&gt;
-  &lt;/div&gt;
-  </code></pre>
+  &lt;img [src]="race.logo" (click)="zoomIn()"/&gt;
+&lt;/div&gt;
+</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8250,13 +8195,13 @@
                       <div class="sl-block" data-block-type="code" style="width: 907px; height: 265px; left: 27px; top: 218px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 180%;">
                               <pre><code>&lt;div&gt;
-    &lt;h2&gt;{{race.name}}&lt;/h2&gt;
+  &lt;h2&gt;{{race.name}}&lt;/h2&gt;
 
-    &lt;div *ng-for="#pony of race.ponies"&gt;
-      {{ pony }}
-    &lt;/div&gt;
+  &lt;div *ng-for="#pony of race.ponies"&gt;
+    {{ pony }}
   &lt;/div&gt;
-  </code></pre>
+&lt;/div&gt;
+</code></pre>
                           </div>
                       </div>
                   </section>
@@ -8264,13 +8209,13 @@
                       <div class="sl-block" data-block-type="code" style="width: 907px; height: 265px; left: 27px; top: 218px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 180%;">
                               <pre><code>&lt;div&gt;
-    &lt;h2&gt;{{race.name}}&lt;/h2&gt;
+  &lt;h2&gt;{{race.name}}&lt;/h2&gt;
 
-    &lt;div *ng-for="#pony of race.ponies"&gt;
-      &lt;pony [pony]="pony" (selected)="bet()"/&gt;
-    &lt;/div&gt;
+  &lt;div *ng-for="#pony of race.ponies"&gt;
+    &lt;pony [pony]="pony" (selected)="bet()"/&gt;
   &lt;/div&gt;
-  </code></pre>
+&lt;/div&gt;
+</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9128,7 +9073,7 @@
                           <div class="sl-block-content" style="z-index: 11; font-size: 160%;">
                               <pre><code>import {Component} from 'angular2/angular2';
 
-  import {Component} from 'angular2/web_worker/ui';</code></pre>
+import {Component} from 'angular2/web_worker/ui';</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9235,18 +9180,18 @@
                       <div class="sl-block" data-block-type="code" style="width: 960px; height: 535px; left: 0px; top: 82px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>.directive('pony', function() {
-      return {
-        restrict: 'E',
-        scope: {},
-        bindToController: {
-          pony: '=',
-          onSelect: '&amp;'
-        },
-        templateUrl: 'pony.html',
-        controller: 'PonyController',
-        controllerAs: 'pony'
-      }
-    })</code></pre>
+    return {
+      restrict: 'E',
+      scope: {},
+      bindToController: {
+        pony: '=',
+        onSelect: '&amp;'
+      },
+      templateUrl: 'pony.html',
+      controller: 'PonyController',
+      controllerAs: 'pony'
+    }
+  })</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9262,18 +9207,18 @@
                       <div class="sl-block" data-block-type="code" style="width: 960px; height: 535px; left: 0px; top: 83px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>.directive('pony', function() {
-      return {
-        restrict: 'E',
-        scope: {},
-        bindToController: {
-          pony: '=',
-          onSelect: '&amp;'
-        },
-        templateUrl: 'pony.html',
-        controller: 'PonyController',
-        controllerAs: 'ponyCtrl'
-      }
-    })</code></pre>
+    return {
+      restrict: 'E',
+      scope: {},
+      bindToController: {
+        pony: '=',
+        onSelect: '&amp;'
+      },
+      templateUrl: 'pony.html',
+      controller: 'PonyController',
+      controllerAs: 'ponyCtrl'
+    }
+  })</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9281,13 +9226,13 @@
                       <div class="sl-block" data-block-type="code" style="width: 960px; height: 351px; left: 0px; top: 174px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>.component('pony', {
-      templateUrl: 'pony.html',
-      controller: 'PonyController',
-      bindings: {
-        pony: '=',
-        onSelect: '&amp;'
-      }
-    })</code></pre>
+    templateUrl: 'pony.html',
+    controller: 'PonyController',
+    bindings: {
+      pony: '=',
+      onSelect: '&amp;'
+    }
+  })</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9311,29 +9256,14 @@
                       <div class="sl-block" data-block-type="code" style="width: 960px; height: 396px; left: 0px; top: 152px;">
                           <div class="sl-block-content" style="z-index: 10; font-size: 200%;">
                               <pre><code>.controller('PonyController', PonyCmp)
-  .component('pony', {
-      templateUrl: 'pony.html',
-      controller: 'PonyController',
-      bindings: {
-        pony: '=',
-        onSelect: '&amp;'
-      }
-    })</code></pre>
-                          </div>
-                      </div>
-                  </section>
-                  <section class="has-dark-background" data-background-color="#3f3f3f">
-                      <div class="sl-block" data-block-type="code" style="width: 960px; height: 390px; left: 0px; top: 155px;">
-                          <div class="sl-block-content" style="z-index: 10; font-size: 200%;">
-                              <pre><code>.controller('PonyController', PonyCmp)
-  .component('pony', {
-      templateUrl: 'pony.html',
-      controller: 'PonyController',
-      bindings: {
-        pony: '=',
-        onSelect: '&amp;'
-      }
-    })</code></pre>
+.component('pony', {
+    templateUrl: 'pony.html',
+    controller: 'PonyController',
+    bindings: {
+      pony: '=',
+      onSelect: '&amp;'
+    }
+  })</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9341,16 +9271,16 @@
                       <div class="sl-block" data-block-type="code" style="width: 960px; height: 576px; left: 0px; top: 62px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
                               <pre><code>@Component({
-    selector: 'pony',
-    templateUrl: 'pony.html'
-  })
-  class PonyCmp {
+  selector: 'pony',
+  templateUrl: 'pony.html'
+})
+class PonyCmp {
 
 
-    onClick() {
+  onClick() {
 
-    }
-  }</code></pre>
+  }
+}</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9358,17 +9288,17 @@
                       <div class="sl-block" data-block-type="code" style="width: 960px; height: 576px; left: 0px; top: 61px;">
                           <div class="sl-block-content" style="z-index: 10; font-size: 200%;">
                               <pre><code>@Component({
-    selector: 'pony',
-    templateUrl: 'pony.html'
-  })
-  class PonyCmp {
-    @Input() pony;
-    @Output() selected = new EventEmitter();
+  selector: 'pony',
+  templateUrl: 'pony.html'
+})
+class PonyCmp {
+  @Input() pony;
+  @Output() selected = new EventEmitter();
 
-    onClick() {
-      this.selected.next();
-    }
-  }</code></pre>
+  onClick() {
+    this.selected.next();
+  }
+}</code></pre>
                           </div>
                       </div>
                   </section>
@@ -9385,12 +9315,12 @@
                           <div class="sl-block-content" style="z-index: 11; font-size: 190%;">
                               <pre><code>let adapter = new UpgradeAdapter();
 
-  angular.module('ponyracer')
-    .component('pony',
-      adapter.downgradeNg2Component(PonyCmp));
+angular.module('ponyracer')
+  .component('pony',
+    adapter.downgradeNg2Component(PonyCmp));
 
-  adapter.bootstrap(document.body, ['ponyracer']);
-  </code></pre>
+adapter.bootstrap(document.body, ['ponyracer']);
+</code></pre>
                           </div>
                       </div>
                   </section>
