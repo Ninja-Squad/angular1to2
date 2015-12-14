@@ -6,7 +6,9 @@
   "dependencies": {
     "angular": "^1.4.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

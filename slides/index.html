@@ -8038,7 +8038,7 @@
                   <section class="has-dark-background" data-background-color="#3f3f3f">
                       <div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 903px; height: 560px; left: 31px; top: 71px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 200%;">
-                              <pre><code>import {Component} from 'angular2/angular2';
+                              <pre><code>import {Component} from 'angular2/core';
 
 @Component({
 
@@ -8197,7 +8197,7 @@ class RaceService {
                               <pre><code>&lt;div&gt;
   &lt;h2&gt;{{race.name}}&lt;/h2&gt;
 
-  &lt;div *ng-for="#pony of race.ponies"&gt;
+  &lt;div *ngFor="#pony of race.ponies"&gt;
     {{ pony }}
   &lt;/div&gt;
 &lt;/div&gt;
@@ -8211,7 +8211,7 @@ class RaceService {
                               <pre><code>&lt;div&gt;
   &lt;h2&gt;{{race.name}}&lt;/h2&gt;
 
-  &lt;div *ng-for="#pony of race.ponies"&gt;
+  &lt;div *ngFor="#pony of race.ponies"&gt;
     &lt;pony [pony]="pony" (selected)="bet()"/&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -9071,7 +9071,7 @@ class RaceService {
                   <section class="has-dark-background" data-background-color="#3f3f3f">
                       <div class="sl-block" data-block-type="code" style="width: 807px; height: 139px; left: 80px; top: 280px;">
                           <div class="sl-block-content" style="z-index: 11; font-size: 160%;">
-                              <pre><code>import {Component} from 'angular2/angular2';
+                              <pre><code>import {Component} from 'angular2/core';
 
 import {Component} from 'angular2/web_worker/ui';</code></pre>
                           </div>
